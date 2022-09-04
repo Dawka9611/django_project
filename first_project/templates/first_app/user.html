@@ -1,0 +1,54 @@
+<!-- {% load static  %} -->
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8" />
+   <title>First App</title>
+   <link rel="stylesheet" href="{% static 'css/mystyles.css' %}">
+</head>
+
+<body>
+   <h1>Hello this is picture</h1>
+   <img src="{% static 'images/IMAGE.jpg' %}" alt="didn't show"/>
+</body>
+
+</html> -->
+<!-- <h1>Hello this is Index.html</h1>
+{{insert_me}} -->
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+   <meta charset="utf-8" />
+   <title>Django Lvel 2</title>
+   <!-- <link rel="stylesheet" href="{% static 'css/mystyles.css' %}">ks -->
+</head>
+
+<body>
+   <h1>Welcome to Django Level Two</h1>
+   <h2>Here are your users for test: </h2>
+   <div class="djangotwo">
+      {% if users %}
+      <table>
+         <thead>
+            <th>First Name</th>
+            <th>Last name</th>
+            <th>email</th>
+         </thead>
+         {% for person in users %}
+         <tr>
+            <td>{{person.first_anme}}</td>
+            <td>{{person.last_name}}</td>
+            <td>{{person.email}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+      {%else %}
+      <p>NO ACCESS RECORDS FOUND!</p>
+      {% endif %}
+   </div>
+</body>
+
+</html>
